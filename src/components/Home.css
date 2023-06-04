@@ -1,0 +1,229 @@
+.home {
+  display: flex;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+.sidebar-container {
+  background: #333;
+  width: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-family: "Courier New", monospace; /* Example font-family */
+  font-size: 16px; /* Example font-size */
+  color: #000000; /* Example text color */
+  line-height: 1.5; /* Example line-height */
+  flex-shrink: 0;
+}
+
+.sidebar-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.sidebar {
+  width: 190px;
+  margin-top: 20vh;
+}
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: url("images/main_image/musc-anime.jpeg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.sidebar li {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: background 0.3s;
+  text-align: center;
+  color: #fff; /* Set default text color to white */
+}
+
+.sidebar li:hover {
+  background: #555;
+}
+
+.sidebar .active {
+  background: #888;
+  color: #fff; /* Set text color to white when active */
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: rgb(224, 224, 224);
+  font-family: "Courier New", monospace; /* Example font-family */
+  font-size: 16px; /* Example font-size */
+  color: #000000; /* Example text color */
+  line-height: 1.5; /* Example line-height */
+}
+
+.sidebar .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: auto;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.sidebar .social-icons .icon {
+  color: #fff;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.sidebar-open {
+  display: flex;
+}
+
+.sidebar-container.open {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 18%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar-container {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .sidebar-container.open {
+    display: block;
+  }
+
+  .menu-button {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-top: 10vh;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .sidebar .active {
+    background: #555;
+  }
+
+  .sidebar .social-icons {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  .close-button {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .sidebar-container.open {
+    width: 100%;
+  }
+
+  .menu-button {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu-button:focus {
+    outline: none;
+  }
+}

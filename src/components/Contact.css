@@ -1,0 +1,70 @@
+.contact-me {
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-me h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #333;
+}
+
+.contact-me p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.contact-me .email {
+  font-weight: bold;
+}
+
+.message-input {
+  width: 100%;
+  height: 200px;
+  /* padding: 10px; */
+  margin-bottom: 10px;
+  resize: vertical;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #7e7b7b;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(250, 250, 250);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(255, 255, 255);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(255, 255, 255);
+}
+
+.send-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.send-button:hover {
+  background-color: #555;
+}
+
+.send-button:focus {
+  outline: none;
+}

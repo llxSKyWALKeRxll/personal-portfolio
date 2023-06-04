@@ -1,0 +1,13 @@
+.resume-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.resume-button:hover {
+  background-color: #555;
+}
